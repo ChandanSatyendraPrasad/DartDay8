@@ -24,8 +24,16 @@ void main() {
   lam1();
   var tg=lam2();
   print('Lambda Expression = $tg');
+  // Higher Order Functions (HOF)
+  hof(95,9,sumhof);
 }
 
+void hof(int i, int j,Function sumhof) {
+  sumhof(i,j);
+}
+void sumhof(int i, int j) {
+  print(i+j);
+}
 int lam2() => 5+9;
 
 void lam1() => print(3+4);
